@@ -11,4 +11,6 @@ install: pip install --use-mirrors -r requirements.txt
 script:
  - python sample.py
  
- 
+branches:
+  except:
+    - testing
