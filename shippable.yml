@@ -11,16 +11,21 @@ install: pip install --use-mirrors -r requirements.txt
 script:
  - python sample.py
 
-#exclude
-#branches:
- # except:
-   # - stage
-  #  - prod
-    
-#archive: true
+# exclude
+branches:
+  except:
+    - master
 
-#notifications:
- #email: 
- # test.accsyncghbb@gmail.com
+# include
+branches:
+  only:
+    - stage
+    - prod
+    
+archive: true
+
+notifications:
+ email: 
+  varsha@shippable.com
   
 #cache: true
